@@ -22,5 +22,5 @@ class CreditCard(val number:Int,var creditLimit:Int)
  * -----------------------------------
  * scala编译器默认生成的访问器并不遵循JavaBean方法的命名规则，但是可以通过添加scala.bean.BeanProperty注解来实现
  */
-class CreditCard1(@BeanProperty val number:Int, var creditLimit:Int)
+class CreditCard11(@BeanProperty val number:Int, var creditLimit:Int)
 

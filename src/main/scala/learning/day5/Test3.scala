@@ -9,10 +9,12 @@ class Test3 {
 
 }
 
-object Test4{
+object Test3{
   def main(args: Array[String]): Unit = {
     val array = Array(1,2,3)
-    val max = (0/:array){_ + _}
+    val sum = (0/:array){_ + _}
+    println(sum)
+    val max = (Integer.MIN_VALUE /:array){Math.max(_,_)}
     println(max)
   }
 }

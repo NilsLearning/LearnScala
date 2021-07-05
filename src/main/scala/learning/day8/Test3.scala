@@ -7,7 +7,7 @@ package learning.day8
  * 2.scala中catch代码块是结合着模式匹配来进行异常处理的
  * 3.注意catch语句块的顺序，java的编译器会去检查catch代码块中的顺序，但是scala中不会去检查case中的代码块顺序，这个据说会在scala未来版本中进行改进
  */
-case class Test3 ()
+case class Test31 ()
 
 object Test3_1{
   def main(args: Array[String]): Unit = {

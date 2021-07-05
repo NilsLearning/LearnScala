@@ -17,4 +17,4 @@ import scala.beans.BeanProperty
  *
  * 注意：在这里要使用@BeanProperty，一定要用val和val来对变量进行声明，否则即使加上BeanProperty注解，依然生成不了javaBean风格的实例
  */
-class CreditCard1(@BeanProperty val number:Int, var creditLimit:Int)
+class CreditCard11(@BeanProperty val number:Int, var creditLimit:Int)

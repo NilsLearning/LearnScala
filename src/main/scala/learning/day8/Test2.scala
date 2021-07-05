@@ -12,6 +12,6 @@ package learning.day8
  * 8.作为分解操作的一部分,如：max(arg: _*）将其分解为离散的值
  * 9.用于部分应用一个函数 val square = Math.pow(_:Int,2)
  */
-class Test2 {
+class Test21 {
 
 }

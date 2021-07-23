@@ -29,13 +29,13 @@ class Test2 {
 ////    case message => println(s"akka actor $message")
 ////  }
 ////}
-
+case class Yang()
 object CreateActors{
   def main(args: Array[String]): Unit = {
     val system = ActorSystem("sample")
     val deep = system.actorOf(Props[TestActor1])
     val deep1 = system.actorOf(Props[TestActor1])
-    deep ! "WonKa"
+    deep ! Yang
 
     deep1 ! "WonKa1"
     Thread.sleep(100)

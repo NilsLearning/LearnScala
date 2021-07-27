@@ -1,6 +1,6 @@
 package learning.day11
 
-import akka.actor.{AbstractActor, Actor, ActorSystem, Props}
+import akka.actor.{Actor, ActorSystem, Props}
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
@@ -8,7 +8,7 @@ import scala.concurrent.duration.Duration
 /**
  * 创建Actor
  * ----------------------------
- * scala使用来自Akka的Actor模型支持，Akka的Actor托管在一个ActorSystem种，它管理了线程，消息队列以及Actor的生命周期，
+ * scala使用来自Akka的Actor模型支持，Akka的Actor托管在一个ActorSystem中，它管理了线程，消息队列以及Actor的生命周期，
  * 相对于使用传统的new关键字来创建实例，我们使用了一种特殊的actorOf工厂方法来创建Actor，并将其对应的ActorRef赋值给了
  * 名为depp的引用。
  *

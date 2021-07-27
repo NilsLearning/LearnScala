@@ -1,4 +1,4 @@
-package test
+package test.example
 
 /**
  * 使用ScalaTest测试
@@ -8,8 +8,9 @@ package test
 class Test2 {
 
 }
-import org.scalatest._
 import java.util
+
+import org.scalatest._
 class UseScalaTest extends FlatSpec with Matchers{
    trait EmptyArrayList{
      val list = new util.ArrayList[String]

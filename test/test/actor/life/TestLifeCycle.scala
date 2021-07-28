@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit
 import akka.actor.{ActorSystem, Props}
 import akka.util.Timeout
 import org.scalatest.FunSuite
-import test.actor.base.ParentActor
 
 import scala.concurrent.Await
 

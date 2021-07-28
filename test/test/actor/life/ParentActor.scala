@@ -1,4 +1,4 @@
-package test.actor.base
+package test.actor.life
 
 import java.util.concurrent.TimeUnit
 

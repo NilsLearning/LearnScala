@@ -12,7 +12,7 @@
 //import akka.actor.ActorSystem
 //import akka.testkit.{EventFilter, TestEvent, TestKitExtension}
 //import akka.util.ccompat._
-//
+//import test.actor.dispatcher.other.ccompatUsedUntil213
 //package object dispatcher {
 //  @ccompatUsedUntil213
 //  def filterEvents[T](eventFilters: Iterable[EventFilter])(block: => T)(implicit system: ActorSystem): T = {

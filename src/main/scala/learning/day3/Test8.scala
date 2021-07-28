@@ -26,6 +26,31 @@ class Money(val amount: Int,val currency: Cash){
   override def toString: String = s"$amount $currency"
 }
 
+object OnlineStatus extends Enumeration {
+
+  type OnlineStatus = Value
+
+  /**
+   * 在线
+   */
+  val online = Value(1,"online")
+
+  /**
+   * 离线
+   */
+  val offline = Value(0,"offline")
+
+  def main(args: Array[String]): Unit = {
+    print(OnlineStatus.online)
+    print(1==OnlineStatus.online)
+    print("online" == OnlineStatus.online)
+    print(1 == OnlineStatus.online.id)
+    println("dddddddddddddd"+ OnlineStatus.online.toString)
+    println(OnlineStatus.online.hashCode())
+    println(OnlineStatus.online.id)
+    print(1 == OnlineStatus.online.hashCode())
+  }
+}
 
 
 

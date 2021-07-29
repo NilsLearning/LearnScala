@@ -14,7 +14,7 @@ class TestSupervisor extends FunSuite {
    * 1.子异常被父级Actor监视到并进行处理
    * 2.父级Actor在没有重写preRestart方法的情况下，会在重启期间掐死自己所有的孩子
    */
-  test("TestSupervisor1") {
+  test("TestSupervisor") {
     val system = ActorSystem("LocalSys")
     val supervisor = system.actorOf(Props[Supervisor1], "supervisor")
 

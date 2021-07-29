@@ -8,6 +8,7 @@ import org.scalatest.FunSuite
 class TestDispatcher extends FunSuite {
 
   /**
+   * 测试在不同调度器下线程处理消息的情况
    */
   test("TestDispatcher") {
     val system = ActorSystem("LocalSys")
@@ -15,10 +16,10 @@ class TestDispatcher extends FunSuite {
     // 通过Props方式创建父Actor
     val pActor1 = system.actorOf(Props[DispatcherActor], name = "DispatcherActor1")
     val pActor2 = system.actorOf(Props[DispatcherActor], name = "DispatcherActor2")
-    for(i <- 1 to 20){
+    for(_ <- 1 to 20){
       pActor1 ! "hello"
     }
-    for(i <- 1 to 20){
+    for(_ <- 1 to 20){
       pActor2 ! "hello"
     }
 

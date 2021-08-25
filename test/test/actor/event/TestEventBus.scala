@@ -51,24 +51,20 @@ class TestEventBus extends FunSuite {
    * 测试扫描分类法
    */
   test("ScanningClassification") {
-//    val system = ActorSystem("lpLocalSys")
-//
-//    val testActor1 = system.actorOf(Props[EventActor], name = "actor1")
-//    val testActor2 = system.actorOf(Props[EventActor], name = "actor2")
-//    val testActor3 = system.actorOf(Props[EventActor], name = "actor3")
-//
-//    val scanningBus = new ScanningBusImpl
-//    scanningBus.subscribe(testActor1, 3)
-//    scanningBus.subscribe(testActor2, 5)
-//    scanningBus.publish("xyzabc")
-//    scanningBus.publish("ab")
-//    scanningBus.publish("abc")
-    //    expectMsg("hello")
+    val system = ActorSystem("lpLocalSys")
 
-    val list = List(1,2,3)
-    for (elem <- list) {
-      println(elem)
-    }
+    val testActor1 = system.actorOf(Props[EventActor], name = "actor1")
+    val testActor2 = system.actorOf(Props[EventActor], name = "actor2")
+    val testActor3 = system.actorOf(Props[EventActor], name = "actor3")
+
+    val scanningBus = new ScanningBusImpl
+    scanningBus.subscribe(testActor1, 3)
+    scanningBus.subscribe(testActor2, 5)
+    scanningBus.publish("xyzabc")
+    scanningBus.publish("ab")
+    scanningBus.publish("abc")
+//        expectMsg("hello")
+
 
 
   }

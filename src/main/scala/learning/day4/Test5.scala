@@ -29,7 +29,7 @@ object Test5_1{
    * 协变Demo
    * 在这里 T <: Pet 表示由T表示的类派生自Pet类，这个语法用于定义一个上界，
    * 通过指定上界，我们告诉Scala数组参数的类型参数T必须至少是一个Pet的数组，但是也可以是任何派生自Pet类型的类的实例数组
-   * 如果不通过协变，我们调用的是”petsContainer1“方法，那么将scala将会出现编译器无法通过的报错
+   * 如果不通过协变，我们调用的是”petsContainer1“方法，那么scala将会出现编译器无法通过的报错
    */
   def petsContainer[T <:Pet](array: Array[T]): Unit ={
     println(array.mkString(", "))

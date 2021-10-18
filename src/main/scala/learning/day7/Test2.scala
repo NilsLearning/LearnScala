@@ -31,6 +31,9 @@ object Test2_1{
     implicitMap("22")="2313"
     println(implicitMap.toString())
 
+//    val v2 = feeds.filter(key => key.equals("key1")).toList
+//    println("v2======"+v2)
+
 //    feeds("key5")="ji"
 //    print(feeds("key5"))
 //    feeds filter { ele => val (key,value) = ele(key startsWith "D") && (value ) }

@@ -66,7 +66,6 @@ class TestEventBus extends FunSuite {
 //        expectMsg("hello")
 
 
-
   }
 
 }

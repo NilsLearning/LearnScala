@@ -39,15 +39,30 @@ class Ponger(pinger: ActorRef) extends Actor {
 
 object Test2{
   def main (args: Array[String] ): Unit = {
-    val system = ActorSystem("pingpong")
+//    val system = ActorSystem("pingpong")
+//
+//    val pinger = system.actorOf(Props[Pinger](), "pinger")
+//
+//    val ponger = system.actorOf(Props(classOf[Ponger], pinger), "ponger")
+//
+//    import system.dispatcher
+//    system.scheduler.scheduleOnce(500 millis) {
+//      ponger ! Ping
+//    }
+    try{
+      throw new RuntimeException
+      println("hhhhh");
+    } catch {
 
-    val pinger = system.actorOf(Props[Pinger](), "pinger")
+      case e:
 
-    val ponger = system.actorOf(Props(classOf[Ponger], pinger), "ponger")
-
-    import system.dispatcher
-    system.scheduler.scheduleOnce(500 millis) {
-      ponger ! Ping
+        Exception => {
+        println("hhhhh")
+        throw e
+      }
+    }finally {
+      println("hello")
     }
+
 }
 }

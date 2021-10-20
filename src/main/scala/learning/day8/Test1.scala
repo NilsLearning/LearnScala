@@ -7,6 +7,8 @@ import java.time.DayOfWeek
   * 注意scala中的模式匹配会进行自动break
   * 1.根据值的类型和守卫进行匹配
   * 2.scala期望模式变量名都以小写字母开头，而常量名则是大写字母
+ * 3.当我们编写一个模式匹配时，都需要确保完整地覆盖了所有可能的case，一般我们会添加一个默认的case，但是如果没有这个默认case，
+ * 我们可以将这些样例的超类定义为密封（sealed）的，密封类除在同一个文件中定义的子类外，不能添加新的子类。
   */
 class Test1 {}
 object Test1_1 {
@@ -22,11 +24,23 @@ object Test1_1 {
   }
 }
 
+sealed abstract class Expr
+case class Str(name:String) extends Expr
+case class Number(num:Int) extends Expr
+case class NumberVar(num:Int,name:String) extends Expr
+
 object Test2 {
 
+  def describe(e:Expr):String = e match{
+    case Number(_) =>  "a number"
+    case Str(_) => "str"
+  }
+
   def main(args: Array[String]): Unit = {
-    testMatchVariable(0)
-    testMatchVariable(100)
+    val value:Number = Number(1)
+    println(describe(value))
+//    testMatchVariable(0)
+//    testMatchVariable(100)
   }
   val max = 100
   val MAX = 100

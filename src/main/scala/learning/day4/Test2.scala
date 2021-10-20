@@ -15,6 +15,8 @@ package learning.day4
  *  -----------------
  *         \/
  *         Nothing
+ *
+ * 2，null是所有引用类型的子类
  */
 class Test2 {
 
@@ -35,5 +37,14 @@ object Test2_2{
   def method1(value : Int)={
     if(value < 10)
       value * 2 else throw new RuntimeException
+  }
+
+  /**
+   * Nothing的用途之一是给出非正常终止的信号
+   * @param message
+   * @return
+   */
+  def error(message: String) :Nothing={
+    throw new RuntimeException(message)
   }
 }

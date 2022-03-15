@@ -12,7 +12,9 @@ package learning.day5
 
 object Test6{
   def main(args: Array[String]): Unit = {
-//    boolAssert(1/0==0)
+    //会抛异常
+    boolAssert(1/0==0)
+    //不会抛异常
     byNameAssert(1/0==0)
   }
 
@@ -26,11 +28,10 @@ object Test6{
   }
 
   /**
-   * 传名参数写法
+   * 函数写法
    */
   def byNameAssert(flag: => Boolean)={
       println("byNameAssert")
-
   }
 
 }
